@@ -16,6 +16,7 @@ ws_type_to_indexes:
   ExpressionMatrix: matrix
   FitnessMatrix: matrix
   TraitMatrix: matrix
+  GenomeSet: genomeset
 
 es_type_global_name: data
 
@@ -44,11 +45,15 @@ sdk_indexer_apps:
     sdk_app: kbasematrices_indexer
     sdk_func: run_kbasematrices_indexer
     sub_obj_index: attribute_mapping
+  KBaseSets.GenomeSet:
+    sdk_app: genomeset_indexer
+    sdk_func: run_genomeset_indexer
 
 # Which indexes are considered "subobjects" (nested under workspace objects, such as genome features)
 ws_subobjects:
   - "genome_features:2"
   - "pangenome_orthologfamily:1"
+  - "attribute_mapping:1"
 
 # Generic, global type mappings. These can be reused in any index mappings below.
 global_mappings:
@@ -84,6 +89,7 @@ latest_versions:
   tree: "tree:1"
   matrix: "matrix:1"
   attribute_mapping: "attribute_mapping:1"
+  genomeset: "genomeset:1"
 
 # Aliases from any index to any name
 aliases:
@@ -98,6 +104,7 @@ aliases:
   "tree:1": tree
   "matrix:1": matrix
   "attribute_mapping:1": attribute_mapping
+  "genomeset:1": genomeset
 
 # All ES type mappings
 mappings:
@@ -254,3 +261,9 @@ mappings:
       num_rows: {type: integer}
       num_columns: {type: integer}
       attributes: {type: keyword}
+
+  "genomeset:1":
+    global_mappings: [ws_auth, ws_object]
+    properties:
+      genomes: {type: object}
+      description: {type: text}
