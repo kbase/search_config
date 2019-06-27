@@ -22,9 +22,6 @@ es_type_global_name: data
 
 # SDK apps used for indexing, map from type_module.type_name -> {'sdk_func': _, 'sdk_app': _, 'sdk_version': _}
 sdk_indexer_apps:
-  KBaseGenomes.Genome:
-    sdk_app: example_app
-    sdk_func: example_func
   KBaseMatrices.MetaboliteMatrix:
     sdk_app: kbasematrices_indexer
     sdk_func: run_kbasematrices_indexer
@@ -266,7 +263,11 @@ mappings:
   "genomeset:1":
     global_mappings: [ws_auth, ws_object]
     properties:
-      genomes: {type: object}
+      genomes:
+        type: object
+        properties:
+          genome_ref: {type: keyword}
+          label: {type: keyword}
       description: {type: text}
 
   "indexing_errors:1":
