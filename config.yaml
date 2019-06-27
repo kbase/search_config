@@ -105,6 +105,7 @@ aliases:
   "matrix:1": matrix
   "attribute_mapping:1": attribute_mapping
   "genomeset:1": genomeset
+  "indexing_errors:1": indexing_errors
 
 # All ES type mappings
 mappings:
@@ -267,3 +268,10 @@ mappings:
     properties:
       genomes: {type: object}
       description: {type: text}
+
+  "indexing_errors:1":
+    properties:
+      evtype: {type: keyword}
+      wsid: {type: integer}
+      objid: {type: integer}
+      error: {type: text}
