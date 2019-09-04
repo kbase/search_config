@@ -305,6 +305,10 @@ mappings:
       id: {type: keyword}
       type: {type: keyword}
       size: {type: integer}
+      contig_ids: {type: keyword}
+      starts: {type: integer}
+      strands: {type: keyword}
+      stops: {type: integer}
       functions: {type: keyword}
       functional_descriptions: {type: keyword}
       warnings: {type: keyword}
