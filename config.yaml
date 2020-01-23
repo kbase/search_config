@@ -90,7 +90,7 @@ latest_versions:
   taxon: "taxon_1"
   tree: "tree_1"
   matrix: "matrix_1"
-  attribute_mapping: "attribute_ma pping_1"
+  attribute_mapping: "attribute_mapping_1"
   genomeset: "genomeset_1"
   indexing_errors: "indexing_errors_1"
   annotated_metagenome_assembly: "annotated_metagenome_assembly_1"
@@ -130,7 +130,7 @@ aliases:
   pangenome_orthologfamily:
     - "pangenome_orthologfamily_1"
   taxon:
-    - "taxon_1" 
+    - "taxon_1"
   tree:
     - "tree_1"
   matrix:
