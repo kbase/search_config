@@ -351,7 +351,7 @@ mappings:
       warnings: {type: text}
       parent_gene: {type: keyword}
       inference_data: {type: keyword}
-      dna_sequence: {type: text}
+      dna_sequence: {type: keyword}
       gc_content: {type: float}
       annotated_metagenome_assembly_size: {type: integer}
       annotated_metagenome_assembly_num_features: {type: integer}
@@ -393,7 +393,7 @@ mappings:
       warnings: {type: text}
       parent_gene: {type: keyword}
       inference_data: {type: keyword}
-      dna_sequence: {type: text}
+      dna_sequence: {type: keyword}
       gc_content: {type: float}
       annotated_metagenome_assembly_size: {type: integer}
       annotated_metagenome_assembly_num_features: {type: integer}
